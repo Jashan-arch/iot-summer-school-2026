@@ -77,6 +77,4 @@ Blink count: 3
 
 ## Author
 
-**Name:** Your Name
-
-**Roll Number:** Your Roll Number
+**Name:** Shubh Jashan Singh
