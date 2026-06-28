@@ -1,3 +1,7 @@
+/*
+ * Author      : Mishthi Chopra
+ * Date        : 28 June 2026
+ */
 const int RLED = 3;
 const int GLED = 5;
 const int BLED = 6;
