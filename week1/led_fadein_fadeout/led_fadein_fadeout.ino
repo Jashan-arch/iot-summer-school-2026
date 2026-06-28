@@ -1,3 +1,9 @@
+/*
+Author: Shubh jashan Singh
+Date: 28-06-2026
+Description:
+Arduino Uno LED FADE IN, FADE OUT project using PWM pins of arduino
+*/
 int ledPins[] = {3, 5, 6, 9, 10, 11};                        
 
 void setup() {
