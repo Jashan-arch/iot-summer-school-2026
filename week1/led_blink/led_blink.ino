@@ -26,7 +26,6 @@ void loop() {
   int potValue = analogRead(potPin);
 
   // Convert the potentiometer reading into a delay value
-  // Delay ranges from 100 ms to 1000 ms
   int delayTime = map(potValue, 0, 1023, 100, 1000);
 
   // Turn the LED ON
