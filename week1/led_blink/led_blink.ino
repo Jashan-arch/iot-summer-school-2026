@@ -1,3 +1,10 @@
+/*
+Author: Shubh jashan Singh
+Date: 28-06-2026
+Description:
+LED blink program with serial monitoring and potentiometer-controlled blink speed.
+*/
+
 int blinkCount = 0;
 int potPin = A0;
 
