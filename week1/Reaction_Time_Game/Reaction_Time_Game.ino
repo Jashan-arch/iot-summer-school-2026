@@ -1,54 +1,77 @@
-/*
- * Author      : Shubh Jashan Singh
- * Date        : 28 June 2026
- */
+const int RLED = 3;
+const int GLED = 5;
+const int BLED = 6;
 
-#include<Servo.h>
-int redLED = 8;
-int yellowLED = 9;
-int greenLED = 10;
-int pushButtonPin = 2;
+const int buttonPin = 2;
 
 unsigned long startTime;
 unsigned long reactionTime;
 
 void setup() {
-  pinMode(redLED, OUTPUT);
-  pinMode(yellowLED, OUTPUT);
-  pinMode(greenLED, OUTPUT);
-  pinMode(pushButtonPin, INPUT);
+  pinMode(RLED, OUTPUT);
+  pinMode(GLED, OUTPUT);
+  pinMode(BLED, OUTPUT);
+  pinMode(buttonPin, INPUT);
 
   Serial.begin(9600);
-  randomSeed(analogRead(0));
+  randomSeed(analogRead(A0));
+
+  Serial.println("Reaction Time Game");
+  Serial.println("Wait for the GREEN LED and press the button!");
 }
 
-void loop() {
-  Serial.println("Get Ready...");
+void loop(){
+  //led off
+  digitalWrite(RLED, LOW);
+  digitalWrite(GLED, LOW);
+  digitalWrite(BLED, LOW);
+
+  Serial.println("\nNew Round Starting...");
   delay(2000);
 
-  // Random blinking sequence
+  //random led blinking
   for (int i = 0; i < 10; i++) {
-    int leds[] = {redLED, yellowLED, greenLED};
-    int randIndex = random(0, 3);
 
-    digitalWrite(leds[randIndex], HIGH);
-    delay(random(200, 800));
-    digitalWrite(leds[randIndex], LOW);
+    int ledChoice = random(0, 3);
+    int randomDelay = random(200, 1001);
+
+    switch (ledChoice) {
+      case 0:
+        digitalWrite(RLED, HIGH);
+        delay(randomDelay);
+        digitalWrite(RLED, LOW);
+        break;
+
+      case 1:
+        digitalWrite(BLED, HIGH);
+        delay(randomDelay);
+        digitalWrite(BLED, LOW);
+        break;
+
+      case 2:
+        digitalWrite(GLED, HIGH);
+        delay(randomDelay);
+        digitalWrite(GLED, LOW);
+        break;
+    }
+  }
+    
+  //add random delay
+  delay(random(500, 2000));
+  Serial.println("GO!");
+  digitalWrite(GLED, HIGH);
+  startTime = millis();
+  
+  //button press
+  while (digitalRead(buttonPin) == HIGH) {
+  }
+  delay(20);
+  //button release
+  while (digitalRead(buttonPin) == LOW) {
   }
 
-  // Random wait
-  delay(random(100,200));
-
-  // Green signal
-  digitalWrite(greenLED, HIGH);
-  startTime = millis();
-
-  // Wait for button
-   while (digitalRead(pushButtonPin) == LOW);
-
   reactionTime = millis() - startTime;
-
-  digitalWrite(greenLED, LOW);
+  digitalWrite(GLED, LOW);
 
   Serial.print("Reaction Time: ");
   Serial.print(reactionTime);
