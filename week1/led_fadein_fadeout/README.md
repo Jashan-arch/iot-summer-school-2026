@@ -83,6 +83,4 @@ Connect each LED to a PWM-capable digital pin through a 220 Ω resistor.
 
 ## Author
 
-**Name:** Your Name
-
-**Roll Number:** Your Roll Number
+**Name:** Shubh Jashan Singh
