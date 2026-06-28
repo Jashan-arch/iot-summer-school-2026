@@ -1,0 +1,36 @@
+name: Count Arduino Files
+
+# Run the workflow whenever code is pushed
+on:
+  push:
+
+jobs:
+  count-ino-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Download repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # Step 3: Count all .ino files
+      - name: Count .ino Files
+        run: |
+          python - <<EOF
+          import os
+
+          count = 0
+
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith(".ino"):
+                      count += 1
+
+          print(f"Number of .ino files: {count}")
+          EOF
