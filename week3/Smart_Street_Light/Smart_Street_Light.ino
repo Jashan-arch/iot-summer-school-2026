@@ -1,7 +1,7 @@
 /*
 -----------------------------------------------------
 Smart Street Light
-Author: Swarnava Dey
+Author: Shubh Jashan Singh
 -----------------------------------------------------
 */
 
