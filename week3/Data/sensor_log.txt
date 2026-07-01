@@ -1,0 +1,48 @@
+Environmental Monitoring Started
+==================
+SENSOR LOG
+Time      : 5028 ms
+Temp      : 76.6 C | Humidity: 40.0%
+Light     : 24% (Dark)
+Distance  : 397.6 cm
+==================
+
+==================
+SENSOR LOG
+Time      : 10028 ms
+Temp      : 14.6 C | Humidity: 40.0%
+Light     : 24% (Dark)
+Distance  : 397.6 cm
+==================
+
+==================
+SENSOR LOG
+Time      : 15028 ms
+Temp      : 14.6 C | Humidity: 40.0%
+Light     : 84% (Bright)
+Distance  : 397.6 cm
+==================
+
+==================
+SENSOR LOG
+Time      : 20028 ms
+Temp      : 14.6 C | Humidity: 40.0%
+Light     : 0% (Dark)
+Distance  : 397.6 cm
+==================
+
+==================
+SENSOR LOG
+Time      : 25007 ms
+Temp      : 14.6 C | Humidity: 40.0%
+Light     : 0% (Dark)
+Distance  : 37.8 cm
+==================
+
+==================
+SENSOR LOG
+Time      : 30006 ms
+Temp      : 14.6 C | Humidity: 40.0%
+Light     : 0% (Dark)
+Distance  : 37.8 cm
+==================
