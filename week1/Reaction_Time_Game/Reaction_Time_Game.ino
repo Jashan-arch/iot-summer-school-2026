@@ -1,5 +1,5 @@
 /*
- * Author      : Mishthi Chopra
+ * Author      : Shubh Jashan Singh
  * Date        : 28 June 2026
  */
 const int RLED = 3;
